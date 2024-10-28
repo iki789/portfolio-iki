@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #131a2e;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: 4rem;
+  margin: -4rem 0 0;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("/bg-dark.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@layer base {
+  h2 {
+    @apply text-2xl;
+    @apply font-semibold;
+    @apply after:h-2;
+    @apply after:w-12;
+    @apply after:rounded;
+    @apply after:content-[''];
+    @apply after:bg-red-600;
+    @apply after:block;
+    @apply after:mt-2;
+    @apply after:bg-gradient-to-r;
+    @apply after:from-violet-500;
+    @apply after:via-pink-500;
+    @apply after:to-rose-600;
+  }
+
+  h3 {
+    @apply font-bold;
+    @apply text-xl;
+    @apply my-8;
+    @apply text-center;
+  }
+}
+
+.switch {
+  display: inline-block;
+  position: relative;
+  transform: scale(0.4);
+  transform-origin: right top;
+}
+
+.switch__input {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.switch__label {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 60px;
+  background-color: #2b2b2b;
+  border: 5px solid #5b5b5b;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.switch__indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateX(-72%);
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #7b7b7b;
+  border-radius: 9999px;
+  box-shadow: 10px 0px 0 0 rgba(#000000, 0.2) inset;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #ffffff;
+    border-radius: 9999px;
+  }
+
+  &::before {
+    top: 7px;
+    left: 7px;
+    width: 9px;
+    height: 9px;
+    background-color: #ffffff;
+    opacity: 0.6;
+  }
+
+  &::after {
+    bottom: 8px;
+    right: 6px;
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+    opacity: 0.8;
+  }
+}
+
+.switch__decoration {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: #ffffff;
+  border-radius: 9999px;
+  animation: twinkle 0.8s infinite -0.6s;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 9999px;
+  }
+
+  &::before {
+    top: -20px;
+    left: 10px;
+    opacity: 1;
+    animation: twinkle 0.6s infinite;
+  }
+
+  &::after {
+    top: -7px;
+    left: 30px;
+    animation: twinkle 0.6s infinite -0.2s;
+  }
+}
+
+@keyframes twinkle {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.switch__indicator {
+  &,
+  &::before,
+  &::after {
+    transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  }
+}
+
+.switch__input:checked + .switch__label {
+  background-color: #8fb5f5;
+  border-color: #347cf8;
+
+  .switch__indicator {
+    background-color: #ecd21f;
+    box-shadow: none;
+    transform: translate(-50%, -50%) translateX(72%);
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .switch__decoration {
+    top: 50%;
+    transform: translate(0%, -50%);
+    animation: cloud 8s linear infinite;
+
+    width: 20px;
+    height: 20px;
+
+    &::before {
+      width: 10px;
+      height: 10px;
+      top: auto;
+      bottom: 0;
+      left: -8px;
+      animation: none;
+    }
+
+    &::after {
+      width: 15px;
+      height: 15px;
+      top: auto;
+      bottom: 0;
+      left: 16px;
+      animation: none;
+    }
+
+    &,
+    &::before,
+    &::after {
+      border-radius: 9999px 9999px 0 0;
+    }
+
+    &::after {
+      border-bottom-right-radius: 9999px;
+    }
+  }
+}
+
+@keyframes cloud {
+  0% {
+    transform: translate(0%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(0%, -50%);
+  }
+}
