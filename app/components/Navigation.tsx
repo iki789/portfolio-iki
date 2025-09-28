@@ -36,7 +36,7 @@ const Navigation = () => {
           <span className="switch__indicator"></span>
         </label>
       </div>
-      <button
+      {/* <button
         className={`bg-white dark:bg-gray-800 rounded-full fixed z-10 ${
           active && "hidden"
         }`}
@@ -46,7 +46,7 @@ const Navigation = () => {
           size={32}
           className="text-black dark:text-white p-1 rounded-full"
         />
-      </button>
+      </button> */}
 
       <div
         id="nav"

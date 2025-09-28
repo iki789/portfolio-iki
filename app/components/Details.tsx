@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Image from "next/image";
 import Card from "./Card";
 import { WorkExperience } from "./WorkExperience";
 import ContactForm from "./ContactForm";
@@ -6,23 +7,89 @@ import { MainHeading } from "./About";
 import ResumeDownloadButton from "./ResumeDownloadButton";
 
 const techIcons = [
-  { name: "React Js", src: "/react-js-icon.svg", level: 1 },
+  { name: "React.js", src: "/react-js-icon.svg", level: 1 },
   { name: "Angular", src: "/angular-icon.svg", level: 1 },
-  { name: "Next Js", src: "/nextjs-icon.svg", level: 1 },
+  { name: "Next.js", src: "/nextjs-icon.svg", level: 1 },
   { name: "Gatsby", src: "/gatsby-js-icon.svg", level: 1 },
-  { name: "Node Js", src: "/node-js-icon.svg", level: 1 },
-  { name: "Jest", src: "/jest-js-icon.svg", level: 1 },
+  { name: "Node.js", src: "/node-js-icon.svg", level: 1 },
   { name: "Python", src: "/python-icon.svg", level: 2 },
-  { name: "Nuxt", src: "/nuxt-js-icon.svg", level: 2 },
-  { name: "PHP", src: "/php-icon.svg", level: 2 },
-  { name: "CodeIgniter", src: "/codeigniter-icon.svg", level: 2 },
-  { name: "MySQl", src: "/mysql-icon.svg", level: 2 },
-  { name: "Microsoft SQL Server", src: "/sql-server-icon.svg", level: 2 },
+  { name: "PHP", src: "/php-icon.svg", level: 2, class: "max-w-[72px]" },
+  { name: "Laravel", src: "/laravel-icon.svg", level: 2 },
+  { name: "MySQL", src: "/mysql-icon.svg", level: 2 },
+  { name: "MSSQL", src: "/sql-server-icon.svg", level: 2 },
   { name: "Redux", src: "/redux-icon.svg", level: 2 },
-  { name: "Wordpress", src: "/remix-icon.svg", level: 2 },
+  { name: "Remix.js", src: "/remix-icon.svg", level: 2 },
+  { name: "Jest", src: "/jest-js-icon.svg", level: 1 },
   { name: "Docker", src: "/docker-icon.svg", level: 3 },
   { name: "AWS", src: "/aws-icon.svg", level: 3 },
   { name: "Azure", src: "/azure-icon.svg", level: 3 },
+];
+
+const portfolio = [
+  {
+    name: "Find It Now",
+    description:
+      "AI powered lost-and-found platform. Manage and find your lost items in an instant.",
+    thumbnail: "/4.jpg",
+    tags: [
+      "NextJs",
+      "Tailwind",
+      "Postgres",
+      "Prisma",
+      "Supabase",
+      "Firebase",
+      "Gemini",
+      "OpenAI",
+    ],
+    url: "#",
+  },
+  {
+    name: "BML",
+    description:
+      "Fashion e-commerce platform. Seamless online shopping for modern apparel.",
+    thumbnail: "/1.jpg",
+    tags: [
+      "HydrogenJs",
+      "Shopify",
+      "Graphql",
+      "Remix",
+      "Tailwind",
+      "i18next",
+      "Stripe",
+    ],
+    url: "#",
+  },
+  {
+    name: "PdfJs",
+    description:
+      "Interactive PDF viewer. Highlight text and search documents instantly.",
+    thumbnail: "/3.jpg",
+    tags: [
+      "ReactJs",
+      "TypeScript",
+      "Mozilla PdfJs",
+      "Mark.js",
+      "TypeScript",
+      "Node.js",
+    ],
+    url: "#",
+  },
+  {
+    name: "Patient Gateway",
+    description:
+      "Medical dashboard. Doctors can view and track patient data with ease.",
+    thumbnail: "/2.jpg",
+    tags: [
+      "ReactJs",
+      "Material UI",
+      "Chart.js",
+      "TypeScript",
+      "Express.js",
+      "MongoDB",
+      "Node.js",
+    ],
+    url: "#",
+  },
 ];
 
 export const Details = (): ReactNode => {
@@ -45,7 +112,7 @@ export const Details = (): ReactNode => {
           </h2>
           <div className="mt-8">
             <p>
-              Results-driven and highly skilled software engineer with over 10+
+              Results-driven and highly skilled software engineer with over 7+
               years of professional experience. Equipped with a comprehensive
               understanding of modern web development technologies and
               frameworks, adept at delivering efficient, scalable, and
@@ -62,13 +129,21 @@ export const Details = (): ReactNode => {
             <h3>My Tech Stack</h3>
             <div className="flex flex-wrap justify-center gap-10 items-center">
               {techIcons.map((icon) => (
-                <img
-                  src={icon.src}
-                  alt={icon.name}
-                  height={48}
-                  width={48}
-                  className="grayscale hover:grayscale-0 hover:ease-in-out transition cursor-pointer "
-                />
+                <figure
+                  key={icon.name}
+                  className="flex justify-center items-center flex-col grayscale hover:grayscale-0 hover:ease-in-out transition cursor-pointer"
+                >
+                  <div className={`h-[48px] mb-2 ${icon.class ?? icon.class}`}>
+                    <img
+                      src={icon.src}
+                      alt={icon.name}
+                      height="48px"
+                      width={"100%"}
+                      className="h-[48px]"
+                    />
+                  </div>
+                  <figcaption className="text-sm">{icon.name}</figcaption>
+                </figure>
               ))}
             </div>
           </div>
@@ -80,139 +155,41 @@ export const Details = (): ReactNode => {
             Projects
           </h2>
           <div className="mt-8 grid grid-cols-2 gap-4 ">
-            <a href="#" className="group">
-              <article className="hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
-                <div className="relative after:content-[''] after:absolute after:bg-gradient-to-r from-purple-300 via-blue-500 to-green-300 after:transition-opacity after:duration-500 after:rounded-xl after:opacity-20 duration-300 group-hover:after:opacity-0 after:w-full after:h-full after:top-0 after:left-0">
-                  <img
-                    src="/thumb1.jpg"
-                    alt=""
-                    className="rounded-tl-xl rounded-tr-xl object-cover w-full"
-                  />
-                </div>
-                <div className="rounded-bl-xl rounded-br-xl bg-white p-4 pt-2 dark:bg-gray-900">
-                  <h4 className="mt-0.5 text-lg font-semibold text-gray-900 dark:text-white">
-                    Article Builder is a app that helps you write articles
-                    without any code.
-                  </h4>
-                  <div className="mt-2 flex flex-wrap gap-1">
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      ReactJs
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      Redux
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      Bootstrap
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      Typescript
-                    </span>
+            {portfolio.map((item) => (
+              <a
+                key={item.name}
+                href={item.url}
+                className="group"
+                target="_blank"
+              >
+                <article className="hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
+                  <div className="relative after:content-[''] after:absolute after:bg-gradient-to-r from-purple-300 via-blue-500 to-green-300 after:transition-opacity after:duration-500 after:rounded-xl after:opacity-20 duration-300 group-hover:after:opacity-0 after:w-full after:h-full after:top-0 after:left-0">
+                    <Image
+                      src={item.thumbnail}
+                      alt={item.name}
+                      width={580}
+                      height={280}
+                      className="rounded-tl-xl rounded-tr-xl object-cover w-full"
+                    />
                   </div>
-                </div>
-              </article>
-            </a>
-            <a href="#" className="group">
-              <article className="hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
-                <div className="relative after:content-[''] after:absolute after:bg-gradient-to-r from-purple-300 via-blue-500 to-green-300 after:transition-opacity after:duration-500 after:rounded-xl after:opacity-20 duration-300 group-hover:after:opacity-0 after:w-full after:h-full after:top-0 after:left-0">
-                  <img
-                    src="/thumb2.jpg"
-                    alt=""
-                    className="rounded-tl-xl rounded-tr-xl object-cover w-full"
-                  />
-                </div>
-                <div className="rounded-bl-xl rounded-br-xl bg-white p-4 pt-2 dark:bg-gray-900">
-                  <h4 className="mt-0.5 text-lg font-semibold text-gray-900 dark:text-white">
-                    A social media app where you can create posts and react
-                    using memes.
-                  </h4>
-                  <div className="mt-2 flex flex-wrap gap-1">
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      Angular
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      MongodDB
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      NGINX
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      PHP
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      Bootstrap
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      Typescript
-                    </span>
+                  <div className="rounded-bl-xl rounded-br-xl bg-white p-4 pt-2 dark:bg-gray-900">
+                    <h4 className="mt-0.5 text-lg font-semibold text-gray-900 dark:text-white">
+                      {item.description}
+                    </h4>
+                    <div className="mt-2 flex flex-wrap gap-1">
+                      {item.tags.map((tag) => (
+                        <span
+                          key={`${tag}-${crypto.randomUUID()}`}
+                          className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </article>
-            </a>
-            <a href="#" className="group">
-              <article className="hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
-                <div className="relative after:content-[''] after:absolute after:bg-gradient-to-r from-purple-300 via-blue-500 to-green-300 after:transition-opacity after:duration-500 after:rounded-xl after:opacity-20 duration-300 group-hover:after:opacity-0 after:w-full after:h-full after:top-0 after:left-0">
-                  <img
-                    src="/thumb3.jpg"
-                    alt=""
-                    className="rounded-tl-xl rounded-tr-xl object-cover w-full"
-                  />
-                </div>
-                <div className="rounded-bl-xl rounded-br-xl bg-white p-4 pt-2 dark:bg-gray-900">
-                  <h4 className="mt-0.5 text-lg font-semibold text-gray-900 dark:text-white">
-                    A responsive landing page with heavy animations and
-                    optimized for speed.
-                  </h4>
-                  <div className="mt-2 flex flex-wrap gap-1">
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      HTML
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      SCSS
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      Bootstrap
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      Webpack
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      Apache
-                    </span>
-                  </div>
-                </div>
-              </article>
-            </a>
-            <a href="#" className="group">
-              <article className="hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
-                <div className="relative after:content-[''] after:absolute after:bg-gradient-to-r from-purple-300 via-blue-500 to-green-300 after:transition-opacity after:duration-500 after:rounded-xl after:opacity-20 duration-300 group-hover:after:opacity-0 after:w-full after:h-full after:top-0 after:left-0">
-                  <img
-                    src="/thumb4.jpg"
-                    alt=""
-                    className="rounded-tl-xl rounded-tr-xl object-cover w-full"
-                  />
-                </div>
-                <div className="rounded-bl-xl rounded-br-xl bg-white p-4 pt-2 dark:bg-gray-900">
-                  <h4 className="mt-0.5 text-lg font-semibold text-gray-900 dark:text-white">
-                    A responsive landing page for GoHub.com which relied on
-                    Lottie animations.
-                  </h4>
-                  <div className="mt-2 flex flex-wrap gap-1">
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      ReactJs
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      Redux
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      Bootstrap
-                    </span>
-                    <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-500 dark:text-purple-100">
-                      Typescript
-                    </span>
-                  </div>
-                </div>
-              </article>
-            </a>
+                </article>
+              </a>
+            ))}
           </div>
         </div>
       </Card>

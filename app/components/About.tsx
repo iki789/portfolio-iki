@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ReactNode } from "react";
-import { FiPhone, FiMapPin, FiMail, FiGithub } from "react-icons/fi";
+import { FiMapPin, FiMail, FiGithub } from "react-icons/fi";
 import { RiStackOverflowLine } from "react-icons/ri";
 import { SiCodementor } from "react-icons/si";
 import Card from "./Card";
@@ -46,7 +46,7 @@ export const About = (): ReactNode => {
           <div className="border-l-4 border-l-purple-600 bg-slate-300 dark:bg-slate-600 p-5 rounded mt-6">
             <p>
               A passionate computer science enthusiast since childhood, I knew
-              early on that this field was meant for me—it didn’t feel like I
+              early on that this field was meant for me, it didn't feel like I
               chose this career; it chose me. The daily challenges and constant
               evolution of technology inspire me to continually refine my skills
               and push my limits.
@@ -55,13 +55,13 @@ export const About = (): ReactNode => {
           <div className="mt-8">
             <ul className="text-left">
               <li className="mb-4">
-                <FiMapPin size={18} className="inline-grid mr-2" /> North
+                <FiMapPin size={18} className="inline-grid mr-2" />
                 Vancouver, BC
               </li>
-              <li className="mb-4">
+              {/* <li className="mb-4">
                 <FiPhone size={18} className="inline-grid mr-2" />{" "}
                 <a href="tel:7788464431">(778) 846 4431</a>
-              </li>
+              </li> */}
               <li className="mb-4">
                 <FiMail size={18} className="inline-grid mr-2" />{" "}
                 <a href="mailto:ikhlak789@gmail.com">ikhlak789@gmail.com</a>
