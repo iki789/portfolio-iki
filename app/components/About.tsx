@@ -10,7 +10,7 @@ import { WelcomeText } from "./WelcomeText";
 export const MainHeading = () => {
   return (
     <div className="text-center">
-      <span className="text-3xl md:text-6xl">Hello 👋, I'm a </span>
+      <span className="text-3xl md:text-6xl">Hello 👋, I&apos;m a </span>
       <br />
       <WelcomeText />
     </div>
@@ -46,10 +46,10 @@ export const About = (): ReactNode => {
           <div className="border-l-4 border-l-purple-600 bg-slate-300 dark:bg-slate-600 p-5 rounded mt-6">
             <p>
               A passionate computer science enthusiast since childhood, I knew
-              early on that this field was meant for me, it didn't feel like I
-              chose this career; it chose me. The daily challenges and constant
-              evolution of technology inspire me to continually refine my skills
-              and push my limits.
+              early on that this field was meant for me, it didn&apos;t feel
+              like I chose this career; it chose me. The daily challenges and
+              constant evolution of technology inspire me to continually refine
+              my skills and push my limits.
             </p>
           </div>
           <div className="mt-8">

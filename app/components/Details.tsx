@@ -34,6 +34,7 @@ const portfolio = [
     tags: [
       "NextJs",
       "Tailwind",
+      "Shadcn",
       "Postgres",
       "Prisma",
       "Supabase",
@@ -41,7 +42,7 @@ const portfolio = [
       "Gemini",
       "OpenAI",
     ],
-    url: "#",
+    url: "https://github.com/team-d-inc/find-it-now",
   },
   {
     name: "BML",
@@ -57,7 +58,7 @@ const portfolio = [
       "i18next",
       "Stripe",
     ],
-    url: "#",
+    url: "https://github.com/iki789/bml-fashion",
   },
   {
     name: "PdfJs",
@@ -72,7 +73,7 @@ const portfolio = [
       "TypeScript",
       "Node.js",
     ],
-    url: "#",
+    url: "https://github.com/iki789/react-pdfjs",
   },
   {
     name: "Patient Gateway",
@@ -88,7 +89,7 @@ const portfolio = [
       "MongoDB",
       "Node.js",
     ],
-    url: "#",
+    url: "https://github.com/iki789/patient-gateway",
   },
 ];
 
