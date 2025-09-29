@@ -1,55 +1,127 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/kTVOdduk)
-# Midterm Project - Personal Portfolio Website
+# Ikhlak Shaikh — Portfolio
 
-## Goal
+👋 About Me
 
-The goal of this project is to create a personal portfolio website that will be used to showcase your work and skills to potential employers. This website will be a living document that you can update throughout the program and beyond.
+I'm Ikhlak Shaikh, a full‑stack software engineer with over 7+ years of professional experience building scalable web applications. I specialize in React/Next.js, Node.js, and modern cloud platforms like AWS and Azure. My work spans front‑end and back‑end development, with a focus on clean code, testing, and delivering solutions that improve user experience and business efficiency.
 
-## Requirements
+I enjoy tackling challenging problems, learning new technologies quickly, and collaborating with cross‑functional teams to bring ideas to life. Outside of coding, I’m passionate about travel and exploring creative design.
 
-- Before you start building your portfolio, create a wireframe of your website. Afterwards, create a mockup in Figma based on your wireframe.
-- Your website can have the following sections/pages:
+---
 
-  - Home
-  - About
-  - Projects
-  - Skills (Soft and Hard Skills)
-  - Work Experiences
-  - Contact
+## 🚀 Running the project
 
-- You can choose to have a separate page for each section or you can have a single page with multiple sections.
-- You can use JavaScript if you want to. You are free to use different libraries or frameworks.
+### 1) Prerequisites
 
-## Example Workflow
+- **Node.js** ≥ 18 (recommended)
+- **npm** (or **pnpm**/**yarn**) installed
 
-- Clone this repository to your local machine.
-- Create a new branch with a descriptive name of your first implementation. You can also create different branches per page.
-- Commit often and write descriptive commit messages.
-- Once you are done with your first implementation, push your branch to GitHub and create a pull request.
-- Once your pull request is approved, merge your branch into the main branch.
-- Create a new branch for your second implementation or page and repeat the process.
-- Do not work on the MAIN branch!
+### 2) Install dependencies
 
-## Content
+```bash
+# using npm
+npm install
+# or
+pnpm install
+# or
+yarn
+```
 
-- Add a short bio about yourself.
-- Add some images to your website. It can be a picture of yourself or any other image that you like. Screenshots of your projects are also a good idea.
-- If you don't have a project yet, you can include this portfolio as your first one.
+### 3) Run the dev server
 
-## Tools
+```bash
+npm run dev
+```
 
-- Visual Studio Code
-- Whimsical (for wireframe)
-- Figma (for mockup design)
+Then open [**http://localhost:3000**](http://localhost:3000).
 
-## Resources
+### 4) Build & start (production)
 
-- Portfolio References: [Developer Portfolios](https://github.com/emmabostian/developer-portfolios)
-- Free Images: [Unsplash](https://unsplash.com/)
-- Icons: [Font Awesome](https://fontawesome.com/)
-- Colors: [Coolors](https://coolors.co/)
-- Fonts: [Google Fonts](https://fonts.google.com/)
+```bash
+npm run build
+npm start
+```
 
-## Submission
+### 5) Lint
 
-- Make sure to push your latest code to GitHub. For the presentation day, each student is given 5-10 minutes to present their project.
+```bash
+npm run lint
+```
+
+> If you prefer **pnpm** or **yarn**, replace the commands accordingly.
+
+---
+
+## 📁 Project Structure
+
+```
+porfolio/
+├─ app/                # App Router pages/layouts/components
+├─ public/             # Static assets (images, icons, etc.)
+├─ .vscode/            # Editor settings (optional)
+├─ next.config.ts      # Next.js config
+├─ tailwind.config.ts  # Tailwind config
+├─ postcss.config.mjs  # PostCSS config
+├─ tsconfig.json       # TypeScript config
+├─ package.json        # Scripts & dependencies
+└─ README.md           # This file
+```
+
+---
+
+## 🧩 Customization
+
+- **Branding:** Update colors, fonts, and spacing in `tailwind.config.ts`.
+- **Meta/SEO:** Define default metadata in `app/layout.tsx` (or the relevant layout file) via Next’s `metadata` export.
+- **Content:** Add/update project entries (title, description, tech, links) in your chosen data source (JSON/TS file or inline in `app/` components).
+- **Analytics:** Add your provider (e.g., Vercel Analytics) in the layout or a dedicated client component.
+
+---
+
+## 📦 Deployment
+
+- **Vercel (recommended):** Import the repo and deploy. Next.js is supported natively.
+- **Static export:** If you opt into `next export`, ensure all routes are compatible.
+
+**Live Demo:** [Portfolio on Vercel](https://iki789.vercel.app/)\
+**Repository:** [GitHub Repo](https://github.com/iki789/porfolio)
+
+---
+
+## 🖼️ Screenshots
+
+### Homepage
+
+
+
+### Projects Section
+
+
+
+> Screenshots are stored under `public/screenshots/`. Replace with updated captures of your site.
+
+---
+
+## 🗺️ Roadmap (nice-to-have)
+
+- Blog section using MDX
+- Dark mode toggle
+- Project filters/search
+- Open Graph images per page
+
+---
+
+## 🛡️ License
+
+This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
+
+---
+
+## 🙌 Credits
+
+Built by **Ikhlak Shaikh**. Inspired by years of building React/Next.js apps and a love for crisp, minimal design.
+
+**Contact:**
+
+- LinkedIn: [https://www.linkedin.com/in/iki789/](https://www.linkedin.com/in/iki789/)
+- GitHub: [https://github.com/iki789](https://github.com/iki789)
+
