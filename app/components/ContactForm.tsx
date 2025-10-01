@@ -1,27 +1,26 @@
 "use client";
 import React, { FormEvent, useState } from "react";
 import { FiCornerDownLeft } from "react-icons/fi";
-import Form from "next/form";
-import z from "zod";
+// import z from "zod";
 
-const contactSchema = z.object({
-  name: z
-    .string({
-      required_error: "Please enter your name.",
-      invalid_type_error: "Enter a valid name.",
-    })
-    .min(3, "Enter a valid name."),
-  email: z
-    .string({
-      required_error: "Please enter your email.",
-    })
-    .email("Enter a valid email."),
-  message: z
-    .string({
-      required_error: "Please enter your message.",
-    })
-    .min(20, "Please provide more details."),
-});
+// const contactSchema = z.object({
+//   name: z
+//     .string({
+//       required_error: "Please enter your name.",
+//       invalid_type_error: "Enter a valid name.",
+//     })
+//     .min(3, "Enter a valid name."),
+//   email: z
+//     .string({
+//       required_error: "Please enter your email.",
+//     })
+//     .email("Enter a valid email."),
+//   message: z
+//     .string({
+//       required_error: "Please enter your message.",
+//     })
+//     .min(20, "Please provide more details."),
+// });
 
 export const ContactForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -44,11 +43,12 @@ export const ContactForm = () => {
       }
 
       // Handle response if necessary
-      const data = await response.json();
+      // const data = await response.json();
       // ...
-    } catch (error: any) {
-      // Capture the error message to display to the user
-      setError(error.message);
+    } catch (error: unknown) {
+      const errorMessage =
+        error instanceof Error ? error.message : "An unexpected error occurred";
+      setError(errorMessage);
       console.error(error);
     } finally {
       setIsLoading(false);

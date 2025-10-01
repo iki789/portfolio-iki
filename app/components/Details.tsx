@@ -4,7 +4,7 @@ import Card from "./Card";
 import { WorkExperience } from "./WorkExperience";
 import ContactForm from "./ContactForm";
 import { MainHeading } from "./About";
-import ResumeDownloadButton from "./ResumeDownloadButton";
+// import ResumeDownloadButton from "./ResumeDownloadButton";
 
 const techIcons = [
   { name: "React.js", src: "/react-js-icon.svg", level: 1 },
