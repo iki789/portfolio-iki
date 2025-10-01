@@ -1,127 +1,36 @@
-# Ikhlak Shaikh — Portfolio
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-👋 About Me
+## Getting Started
 
-I'm Ikhlak Shaikh, a full‑stack software engineer with over 7+ years of professional experience building scalable web applications. I specialize in React/Next.js, Node.js, and modern cloud platforms like AWS and Azure. My work spans front‑end and back‑end development, with a focus on clean code, testing, and delivering solutions that improve user experience and business efficiency.
-
-I enjoy tackling challenging problems, learning new technologies quickly, and collaborating with cross‑functional teams to bring ideas to life. Outside of coding, I’m passionate about travel and exploring creative design.
-
----
-
-## 🚀 Running the project
-
-### 1) Prerequisites
-
-- **Node.js** ≥ 18 (recommended)
-- **npm** (or **pnpm**/**yarn**) installed
-
-### 2) Install dependencies
-
-```bash
-# using npm
-npm install
-# or
-pnpm install
-# or
-yarn
-```
-
-### 3) Run the dev server
+First, run the development server:
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Then open [**http://localhost:3000**](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### 4) Build & start (production)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```bash
-npm run build
-npm start
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### 5) Lint
+## Learn More
 
-```bash
-npm run lint
-```
+To learn more about Next.js, take a look at the following resources:
 
-> If you prefer **pnpm** or **yarn**, replace the commands accordingly.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 📁 Project Structure
+## Deploy on Vercel
 
-```
-porfolio/
-├─ app/                # App Router pages/layouts/components
-├─ public/             # Static assets (images, icons, etc.)
-├─ .vscode/            # Editor settings (optional)
-├─ next.config.ts      # Next.js config
-├─ tailwind.config.ts  # Tailwind config
-├─ postcss.config.mjs  # PostCSS config
-├─ tsconfig.json       # TypeScript config
-├─ package.json        # Scripts & dependencies
-└─ README.md           # This file
-```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
----
-
-## 🧩 Customization
-
-- **Branding:** Update colors, fonts, and spacing in `tailwind.config.ts`.
-- **Meta/SEO:** Define default metadata in `app/layout.tsx` (or the relevant layout file) via Next’s `metadata` export.
-- **Content:** Add/update project entries (title, description, tech, links) in your chosen data source (JSON/TS file or inline in `app/` components).
-- **Analytics:** Add your provider (e.g., Vercel Analytics) in the layout or a dedicated client component.
-
----
-
-## 📦 Deployment
-
-- **Vercel (recommended):** Import the repo and deploy. Next.js is supported natively.
-- **Static export:** If you opt into `next export`, ensure all routes are compatible.
-
-**Live Demo:** [Portfolio on Vercel](https://iki789.vercel.app/)\
-**Repository:** [GitHub Repo](https://github.com/iki789/porfolio)
-
----
-
-## 🖼️ Screenshots
-
-### Homepage
-
-
-
-### Projects Section
-
-
-
-> Screenshots are stored under `public/screenshots/`. Replace with updated captures of your site.
-
----
-
-## 🗺️ Roadmap (nice-to-have)
-
-- Blog section using MDX
-- Dark mode toggle
-- Project filters/search
-- Open Graph images per page
-
----
-
-## 🛡️ License
-
-This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
-
----
-
-## 🙌 Credits
-
-Built by **Ikhlak Shaikh**. Inspired by years of building React/Next.js apps and a love for crisp, minimal design.
-
-**Contact:**
-
-- LinkedIn: [https://www.linkedin.com/in/iki789/](https://www.linkedin.com/in/iki789/)
-- GitHub: [https://github.com/iki789](https://github.com/iki789)
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

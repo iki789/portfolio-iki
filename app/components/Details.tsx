@@ -102,7 +102,7 @@ export const Details = (): ReactNode => {
             <MainHeading />
           </div>
           <div className="max-w-72 absolute bottom-4">
-            <ResumeDownloadButton />
+            {/* <ResumeDownloadButton /> */}
           </div>
         </div>
       </Card>
