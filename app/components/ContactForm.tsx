@@ -41,10 +41,6 @@ export const ContactForm = () => {
       if (!response.ok) {
         throw new Error("Failed to submit the data. Please try again.");
       }
-
-      // Handle response if necessary
-      // const data = await response.json();
-      // ...
     } catch (error: unknown) {
       const errorMessage =
         error instanceof Error ? error.message : "An unexpected error occurred";
@@ -102,6 +98,7 @@ export const ContactForm = () => {
           id="message"
           className="mt-2 w-full rounded-lg border-gray-200 align-top shadow-sm sm:text-sm dark:border-gray-700 dark:bg-gray-700 dark:text-white"
           rows={4}
+          name="message"
           placeholder="Message..."
         ></textarea>
       </div>

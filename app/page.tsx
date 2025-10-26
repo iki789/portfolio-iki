@@ -3,7 +3,7 @@ import { Details } from "./components/Details";
 import Navigation from "./components/Navigation";
 
 export const metadata = {
-  title: "Ikhlak S. | Full-stack Developer.",
+  title: "Ikhlak S. | Full-stack Developer",
   description: "",
 };
 
