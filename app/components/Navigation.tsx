@@ -28,7 +28,7 @@ const Navigation = () => {
           className="switch__input"
           id="switch"
           onClick={() => darkModeHandler()}
-          checked={dark}
+          defaultChecked={dark}
         />
         <label className="switch__label" htmlFor="switch">
           <span className="switch__decoration"></span>

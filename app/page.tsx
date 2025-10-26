@@ -2,6 +2,11 @@ import { About } from "./components/About";
 import { Details } from "./components/Details";
 import Navigation from "./components/Navigation";
 
+export const metadata = {
+  title: "Ikhlak S. | Full-stack Developer.",
+  description: "",
+};
+
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
