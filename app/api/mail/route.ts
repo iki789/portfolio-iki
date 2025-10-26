@@ -11,7 +11,7 @@ const ContactFormSchema = object({
     .email("Email is invalid")
     .transform((str) => str.trim()),
   message: string()
-    .min(3, "Message is too short.")
+    .min(20, "Message is too short.")
     .max(500, "Message is too long.")
     .transform((str) => str.trim()),
 });
