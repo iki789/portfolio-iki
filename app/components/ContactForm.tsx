@@ -87,6 +87,7 @@ export const ContactForm = () => {
           name="name"
           placeholder="Name"
           className="mt-1 w-full rounded-lg border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-700 dark:text-gray-200"
+          disabled={isLoading || sentMessage}
         />
       </div>
       <div className="mb-2">
@@ -103,6 +104,7 @@ export const ContactForm = () => {
           name="email"
           placeholder="Email"
           className="mt-1 w-full rounded-lg border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-700 dark:text-gray-200"
+          disabled={isLoading || sentMessage}
         />
       </div>
 
@@ -120,6 +122,7 @@ export const ContactForm = () => {
           rows={4}
           name="message"
           placeholder="Message..."
+          disabled={isLoading || sentMessage}
         ></textarea>
       </div>
       <div className="flex flex-row-reverse justify-between align-end col-span-2 text-right">
