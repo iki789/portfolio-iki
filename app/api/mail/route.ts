@@ -40,6 +40,7 @@ export const POST = async (req: NextRequest) => {
 
       return NextResponse.json({ ok: false, errors });
     }
+    console.error({ err });
+    return NextResponse.json({ ok: false });
   }
-  return NextResponse.json({ ok: false });
 };
