@@ -43,7 +43,6 @@ const experiences = [
       "Developed and maintained complex CMS and JavaScript applications with a focus on high-quality code, scalability, and performance. Enhanced productivity through scripts and automation tools, optimized bundles to reduce page load times by ~60%, and integrated APIs for payment, CRM, and social media. Mentored junior engineers in web development, providing technical support and guidance on WordPress best practices to clients and end-users.",
     tags: [
       "React/Remix",
-      "React",
       "Typescript",
       "JavaScript",
       "Shopify",

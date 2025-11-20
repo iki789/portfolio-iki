@@ -151,6 +151,16 @@ export const Details = (): ReactNode => {
         </div>
       </Card>
       <Card>
+        <div className="" id="work-experience">
+          <h2 className="text-2xl font-semibold after:h-2 after:w-12 after:rounded after:content-[''] after:bg-red-600 after:block after:mt-2">
+            Work Experience
+          </h2>
+          <div className="mt-8">
+            <WorkExperience />
+          </div>
+        </div>
+      </Card>
+      <Card>
         <div className="" id="projects">
           <h2 className="text-2xl font-semibold after:h-2 after:w-12 after:rounded after:content-[''] after:bg-red-600 after:block after:mt-2">
             Projects
@@ -191,16 +201,6 @@ export const Details = (): ReactNode => {
                 </article>
               </a>
             ))}
-          </div>
-        </div>
-      </Card>
-      <Card>
-        <div className="" id="work-experience">
-          <h2 className="text-2xl font-semibold after:h-2 after:w-12 after:rounded after:content-[''] after:bg-red-600 after:block after:mt-2">
-            Work Experience
-          </h2>
-          <div className="mt-8">
-            <WorkExperience />
           </div>
         </div>
       </Card>
