@@ -75,7 +75,7 @@ const experiences = [
     name: "Full-stack Developer",
     company: "Upwork",
     position: "Full-stack Developer",
-    location: "Chicago, Illinois",
+    location: "Remote",
     startDate: "Jan 2015",
     endDate: "Mar 2019",
     descriptiom:
