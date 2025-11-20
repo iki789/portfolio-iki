@@ -207,7 +207,7 @@ export const Details = (): ReactNode => {
       <Card>
         <div className="" id="contact">
           <h2 className="text-2xl font-semibold after:h-2 after:w-12 after:rounded after:content-[''] after:bg-red-600 after:block after:mt-2">
-            Contact
+            Contact Me
           </h2>
           <div className="mt-8">
             <ContactForm />
