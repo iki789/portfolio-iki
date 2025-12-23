@@ -9,11 +9,11 @@ const experiences = [
   {
     name: "Goals and Gambles",
     company: "Goals and Gambles",
-    position: "Senior Software Developer",
+    position: "Senior Frontend Developer",
     location: "Cedar Hill, Texas",
     startDate: "Sept 2020",
     endDate: "Present",
-    descriptiom:
+    description:
       "Led and contributed to the development of robust, institutional software, covering the full lifecycle from requirements gathering and design through implementation, testing, and deployment. Collaborated closely with cross-functional teams, including product managers, designers, and other stakeholders.",
     tags: [
       "React",
@@ -37,9 +37,9 @@ const experiences = [
     company: "DreamChasers",
     position: "Full-Stack Developer",
     location: "Chicago, Illinois",
-    startDate: "Sept 2019",
-    endDate: "Mar 2021",
-    descriptiom:
+    startDate: "Feb 2018",
+    endDate: "Sept 2020",
+    description:
       "Developed and maintained complex CMS and JavaScript applications with a focus on high-quality code, scalability, and performance. Enhanced productivity through scripts and automation tools, optimized bundles to reduce page load times by ~60%, and integrated APIs for payment, CRM, and social media. Mentored junior engineers in web development, providing technical support and guidance on WordPress best practices to clients and end-users.",
     tags: [
       "React/Remix",
@@ -65,9 +65,9 @@ const experiences = [
     company: "E Kingdom Sites",
     position: "Wordpress Developer",
     location: "Chicago, Illinois",
-    startDate: "Sept 2019",
-    endDate: "Mar 2021",
-    descriptiom:
+    startDate: "Sept 2017",
+    endDate: "Mar 2018",
+    description:
       "Maintained and enhanced legacy website applications, customizing existing sites and plugins to align with client requirements by implementing custom functionality, styling, and layout adjustments. Diagnosed and resolved issues, identifying and fixing bugs or conflicts within the codebase.",
     tags: ["PHP", "Wordpress", "jQuery", "Theme/Plugin Development", "MySQL"],
   },
@@ -78,7 +78,7 @@ const experiences = [
     location: "Remote",
     startDate: "Jan 2015",
     endDate: "Mar 2019",
-    descriptiom:
+    description:
       "Developed secure, well-documented applications and RESTful APIs, creating responsive, scalable solutions with a focus on security. Enhanced accessibility with WAI-ARIA for assistive technology users. Led website and mobile app development from concept to deployment, collaborating with product teams via Confluence and Jira to drive feature implementation. Managed time-sensitive updates, including content and database upgrades, and improved code quality through unit, integration, and E2E testing.",
     tags: [
       "React",
@@ -131,7 +131,7 @@ export const WorkExperience = () => {
                     {exp.startDate} - {exp.endDate}
                   </div>
                 </div>
-                <div className="mb-4">{exp.descriptiom}</div>
+                <div className="mb-4">{exp.description}</div>
                 <div className="flex flex-wrap gap-1">
                   {exp.tags.map((tag) => (
                     <span
